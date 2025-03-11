@@ -1,14 +1,13 @@
 {
   "manifest_version": 3,
   "name": "English-Vietnamese Dictionary",
-  "description": "Look up English words and save vocabulary in Vietnamese using Google Gemini",
+  "description": "Look up English words and save vocabulary in Vietnamese",
   "version": "0.1.0",
   "action": {
     "default_popup": "index.html",
     "default_title": "EN-VI Dictionary"
   },
-  "permissions": ["storage", "contextMenus"],
-  "host_permissions": ["https://*.googleapis.com/"],
+  "permissions": ["storage", "contextMenus", "windows"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

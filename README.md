@@ -1,46 +1,85 @@
-# Getting Started with Create React App
+# English-Vietnamese Dictionary Chrome Extension
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Chrome extension that provides instant English to Vietnamese translations and definitions using Google's Gemini AI. Look up words by selecting text on any webpage or searching directly in the extension popup.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Double-click or right-click to look up English words on any webpage
+- Get detailed Vietnamese translations and definitions powered by Google Gemini AI
+- Save favorite words for future reference
+- View phonetic pronunciations, part of speech, definitions, and example sentences
+- Clean, intuitive user interface
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone this repository:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+git clone https://github.com/yourusername/english-vietnamese-dictionary.git
+```
 
-### `npm test`
+2. Install dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
 
-### `npm run build`
+3. Create a `.env` file in the root directory and add your Google Gemini API key:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+REACT_APP_GEMINI_API_KEY=your_api_key_here
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Build the extension:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run build
+```
 
-### `npm run eject`
+5. Load the extension in Chrome:
+   - Open Chrome and go to `chrome://extensions/`
+   - Enable "Developer mode" in the top right
+   - Click "Load unpacked" and select the `build` folder
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Development
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Run the development build with watch mode:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm run watch
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- The project uses:
+  - React with TypeScript
+  - Google Generative AI (Gemini)
+  - Chrome Extension Manifest V3
+  - Webpack for building
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `/src`
+  - `components/` - React components for the popup UI
+  - `services/` - API and storage service functions
+  - `background.ts` - Extension background service worker
+  - `content.ts` - Content script for webpage integration
+  - `App.tsx` - Main React application
+- `/public` - Static assets and manifest.json
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
+
+1. **Quick Lookup**
+
+   - Double-click any English word on a webpage
+   - Click the dictionary icon that appears
+   - Or right-click and select "Look up in EN-VI Dictionary"
+
+2. **Search**
+
+   - Click the extension icon in Chrome toolbar
+   - Enter a word in the search box
+   - View detailed translations and definitions
+
+3. **Save Words**
+   - Click "Save Word" on any definition
+   - Access saved words through the "Saved Words" tab
+   - Remove words from saved list as needed

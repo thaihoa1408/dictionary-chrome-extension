@@ -1,38 +1,174 @@
 .App {
+  width: 350px;
+  min-height: 400px;
+  padding: 15px;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 8px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
+.tabs button.active {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+}
+
+/* Dictionary Search */
+.dictionary-search form {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.dictionary-search input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+}
+
+.dictionary-search button {
+  padding: 8px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.dictionary-search button:disabled {
+  background-color: #95a5a6;
+}
+
+.error {
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.result {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: white;
+}
+
+.word-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.word-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.phonetic {
+  margin-left: 10px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.save-button {
+  margin-left: auto;
+  padding: 5px 10px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.meaning {
+  margin-bottom: 15px;
+}
+
+.meaning h3 {
+  font-size: 1rem;
+  color: #3498db;
+  margin-bottom: 5px;
+}
+
+.vietnamese {
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.definition {
+  margin-bottom: 8px;
+}
+
+.example {
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+/* Saved Words */
+.saved-words h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.saved-word-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.remove-button {
+  margin-left: auto;
+  padding: 3px 8px;
+  background-color: #e74c3c;
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+.part-of-speech {
+  font-weight: bold;
+  color: #3498db;
+  margin-right: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.no-saved-words {
+  text-align: center;
+  color: #7f8c8d;
+  margin-top: 30px;
+}
+
+.saved-time {
+  font-size: 12px;
+  color: #7f8c8d;
+  margin-bottom: 8px;
+  font-style: italic;
 }

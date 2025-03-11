@@ -1,19 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  document.getElementById("root") as HTMLElement
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Check if there's a word to look up from double-click or context menu
+chrome.storage.local.get("lookupWord", (data) => {
+  root.render(
+    <React.StrictMode>
+      <App initialWord={data.lookupWord || ""} />
+    </React.StrictMode>
+  );
+
+  // Clear the stored word after using it
+  if (data.lookupWord) {
+    chrome.storage.local.remove("lookupWord");
+  }
+});
