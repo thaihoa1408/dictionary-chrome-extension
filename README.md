@@ -4,11 +4,9 @@ A Chrome extension that provides instant English to Vietnamese translations and 
 
 ## Preview
 
-![Extension Popup](./public/preview1.png)
-_Main extension popup interface_
+![Extension Popup](./public/preview1.png){width=600}
 
-![Saved Words](./public/preview2.png)
-_Saved words collection_
+![Saved Words](./public/preview2.png){width=600}
 
 ## Features
 
