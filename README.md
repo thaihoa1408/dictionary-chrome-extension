@@ -2,6 +2,14 @@
 
 A Chrome extension that provides instant English to Vietnamese translations and definitions using Google's Gemini AI. Look up words by selecting text on any webpage or searching directly in the extension popup.
 
+## Preview
+
+![Extension Popup](./public/preview1.png)
+_Main extension popup interface_
+
+![Saved Words](./public/preview2.png)
+_Saved words collection_
+
 ## Features
 
 - Double-click or right-click to look up English words on any webpage
